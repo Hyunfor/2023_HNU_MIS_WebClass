@@ -3,7 +3,6 @@ package unit01;
 import java.io.IOException;
 import java.io.PrintWriter;
 
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -11,16 +10,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class AdditonServlet01
+ * Servlet implementation class MethodServlet
  */
-@WebServlet("/HelloServlet03")
-public class HelloServlet03 extends HttpServlet {
+@WebServlet("/MethodServlet")
+public class MethodServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public HelloServlet03() {
+    public MethodServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -35,7 +34,7 @@ public class HelloServlet03 extends HttpServlet {
 		PrintWriter out = response.getWriter();
 		out.println("<html><head><title>Hello</title></head>");
 		out.println("<body>");
-		out.println("<h1>헬로우 서블릿</h1>");
+		out.println("<h1>get방식으로 처리됨</h1>");
 		out.println("</body>");
 		out.println("</html>");
 		
@@ -45,8 +44,16 @@ public class HelloServlet03 extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
+		
+		response.setContentType("text/html; charset=UTF-8");
+		
+		PrintWriter out = response.getWriter();
+		out.println("<html><head><title>Hello</title></head>");
+		out.println("<body>");
+		out.println("<h1>post방식으로 처리됨</h1>");
+		out.println("</body>");
+		out.println("</html>");
+		
 	}
 
 }
