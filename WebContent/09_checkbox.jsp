@@ -9,7 +9,7 @@
 <body>
 	<h2>악세사리</h2>
 	관심항목을 선택하세요.<hr>
-	<form method="get" aciton="CheckboxServlet">
+	<form method="get" action="CheckboxServlet">
 		<input type="checkbox" name="item" value="신발"> 신발
 		<input type="checkbox" name="item" value="가방"> 가방
 		<input type="checkbox" name="item" value="벨트"> 벨트 <br>

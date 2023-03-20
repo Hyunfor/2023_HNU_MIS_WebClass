@@ -10,16 +10,16 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class CheckboxServlet
+ * Servlet implementation class SelectServlet
  */
-@WebServlet("/CheckboxServlet")
-public class CheckboxServlet extends HttpServlet {
+@WebServlet("/SelectServlet")
+public class SelectServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public CheckboxServlet() {
+    public SelectServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -28,18 +28,22 @@ public class CheckboxServlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		String job = request.getParameter("job");
+		String interests[] = request.getParameterValues("interest");
+		
 		response.setContentType("text/html; charset=UTF-8");
 		
 		PrintWriter out = response.getWriter();
 		out.println("<html><body>");
+		out.println("유저가 선택한 직업 : <br>");
+		out.println(job);
 		
-		String items[] = request.getParameterValues("item");
-		if(items == null){
+		out.println("</br><hr>유저가 선택한 관심분야 : <br>");
+		if(interests == null){
 			out.print("선택한 항목이 없습니다.");
 		} else {
-			out.println("유저가 선택한 항목입니다.");
-			for(String item : items){
-				out.print(item + " ");
+			for(String interest : interests){
+				out.print(interest + " ");
 			}
 		}
 		
