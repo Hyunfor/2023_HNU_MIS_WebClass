@@ -3,6 +3,7 @@ package unit01;
 import java.io.IOException;
 import java.io.PrintWriter;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -32,11 +33,18 @@ public class HelloServlet extends HttpServlet {
 		String h2 = "Servlet";
 		String add = h1 + h2;
 		PrintWriter out = response.getWriter();
-		out.println("<html><head><title>Additon</title></head>");
+		out.println("<html><head><title>Hello</title></head>");
 		out.println("<body>");
 		out.println(h1 + "+" + h2 + "=" + add);
 		out.println("</body>");
 		out.println("</html>");
+		
+		request.setAttribute("h1", h1);
+		request.setAttribute("h2", h2);
+		request.setAttribute("add", add);
+		
+		RequestDispatcher dispatcher = request.getRequestDispatcher("Hello.jsp");
+		dispatcher.forward(request, response);
 	}
 
 	/**
