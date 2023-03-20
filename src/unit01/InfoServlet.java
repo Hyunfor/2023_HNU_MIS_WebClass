@@ -34,7 +34,7 @@ public class InfoServlet extends HttpServlet {
 		String addr = request.getParameter("addr");
 		
 		PrintWriter out = response.getWriter();
-		out.println("<html><head><title>Hello</title></head>");
+		out.println("<html><body>");
 		out.println("<body>");
 		out.println("<h1>유저가 입력한 정보입니다.</h1>");
 		out.println("이름: ");

@@ -61,7 +61,7 @@ public class RadioServlet extends HttpServlet {
 		String content = request.getParameter("content");
 		
 		PrintWriter out = response.getWriter();
-		out.println("<html><head><title>Hello</title></head>");
+		out.println("<html><body>");
 		out.println("<body>");
 		out.println("유저가 입력한 정보입니다.<hr>");
 		out.println("성별 : <br> ");
