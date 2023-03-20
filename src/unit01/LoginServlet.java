@@ -51,8 +51,23 @@ public class LoginServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		doGet(request, response);
+		response.setContentType("text/html; charset=UTF-8");
+		
+		String id = request.getParameter("id");
+		String pwd = request.getParameter("pwd");
+		
+		PrintWriter out = response.getWriter();
+		out.println("<html><head><title>Hello</title></head>");
+		out.println("<body>");
+		out.println("<h1>유저가 입력한 정보입니다.</h1>");
+		out.println("아이디: ");
+		out.println(id);
+		out.println("<br> 비밀번호: ");
+		out.println(pwd);
+		
+		out.println("<br><a href='javascript:history.go(-1)'>다시</a>");
+		out.println("</body>");
+		out.println("</html>");
 	}
 
 }

@@ -15,5 +15,14 @@
 		<input type="password" name="pwd" id="userpwd"><br>
 		<input type="submit" value="로그인">
 	</form>
+	
+	<form method="post" action="LoginServlet">
+		<label for="userid">아이디 : </label>
+		<input type="text" name="id" id="userid"><br>
+		
+		<label for="userpwd">암 &nbsp; 호 : </label>
+		<input type="password" name="pwd" id="userpwd"><br>
+		<input type="submit" value="로그인">
+	</form>
 </body>
 </html>
