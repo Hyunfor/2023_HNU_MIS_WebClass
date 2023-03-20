@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-	test
+	연결확인
 </body>
 </html>
