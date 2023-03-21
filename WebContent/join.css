@@ -1,0 +1,14 @@
+@CHARSET "UTF-8";
+html, body {
+	height: 100%;
+}
+
+label {
+	width: 200px;
+	display: inline-block;
+	float: left;
+}
+
+#button {
+	text-align: center;
+}
