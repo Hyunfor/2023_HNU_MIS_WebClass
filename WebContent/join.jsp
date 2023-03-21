@@ -16,6 +16,44 @@
 			join_form.name.focus();
 			return false;
 		}
+		
+		if(document.join_form.rrn1.value.length != 6){
+			alert("주민번호는 6글자 입니다.");
+			join_form.rrn1.focus();
+			return false;
+		}
+		
+		if(document.join_form.rrn2.value.length != 7){
+			alert("주민번호는 7글자 입니다.");
+			join_form.rrn2.focus();
+			return false;
+		}
+		
+		if(document.join_form.userid.value.length == 0){
+			alert("아이디를 입력해주세요.");
+			join_form.userid.focus();
+			return false;
+		}
+		
+		if(document.join_form.userid.value.length < 4){
+			alert("아이디는 4글자 이상입력해야 합니다.");
+			join_form.userid.focus();
+			return false;
+		}
+		
+		if(document.join_form.userpwd.value.length == 0){
+			alert("비밀번호를 입력해주세요.");
+			join_form.userpwd.focus();
+			return false;
+		}
+		// 비밀번호 체크
+		if(document.join_form.userpwd.value.length != document.join_form.userpwd_chk.value.length){
+			alert("비밀번호가 일치하지 않습니다.");
+			join_form.userpwd_chk.focus();
+			return false;
+		}
+		
+		return true;
 	}
 	
 </script>
@@ -35,7 +73,7 @@
 		<input type="text" name="rrn2" id="rrm"> <br>
 		
 		<label for="userid">아이디 </label><span style="color:red"> * </span>
-		<input type="text" name="id" id="userid"><br>
+		<input type="text" name="userid" id="userid"><br>
 		
 		<label for="userpwd">비밀번호 </label><span style="color:red"> * </span>
 		<input type="password" name="userpwd" id="userpwd"><br>
