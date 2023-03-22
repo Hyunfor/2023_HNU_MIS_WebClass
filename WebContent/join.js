@@ -6,7 +6,7 @@ function input_check(){
 	
 	if(document.join.name.value.length == 0){
 		alert("이름을 입력해주세요.");
-		document.join.name.focus();
+		join.name.focus();
 		return false;
 	} 
 	
@@ -14,8 +14,8 @@ function input_check(){
 		alert("주민번호는 6글자 입니다.");
 		join.rrn.focus();
 		return false;
-	}
-		
+	} 
+	
 	if(document.join.rrn2.value.length != 7){
 		alert("주민번호는 7글자 입니다.");
 		join.rrn2.focus();

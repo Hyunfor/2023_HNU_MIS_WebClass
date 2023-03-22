@@ -18,11 +18,11 @@
 		<label for="rule" style="color:red">* 필수 입력란</label>
 		<br>
 		<label for="name">이름 </label><span style="color:red"> * </span>
-		<input type="text" name="name" id="name"> <br>
+		<input type="text" name="name" id="name" value="전우치"> <br>
 		
 		<label for="rrn">주민등록번호 </label><span style="color:red"> * </span>
-		<input type="text" name="rrn" id="rrn"> - 
-		<input type="text" name="rrn2" id="rrn"> <br>
+		<input type="text" name="rrn" id="rrn" value="890719"> - 
+		<input type="text" name="rrn2" id="rrn2" value="2012123"> <br>
 		
 		<label for="userid">아이디 </label><span style="color:red"> * </span>
 		<input type="text" name="userid" id="userid"><br>
@@ -79,8 +79,8 @@
 			<input type="checkbox" id="interest" name="interest" value="창업"> 창업 
 		
 		<div id="button">
-			<input type="submit" value="회원가입" onclick="return check()">
-			<button id="btn" onclick="history.back();"> 뒤로가기</button>
+			<input type="submit" value="회원가입" onclick="return input_check()">
+			<input type="reset" value="가입취소">
 		</div>
 	</form>
 	
