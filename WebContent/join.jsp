@@ -9,59 +9,11 @@
 <link href="join.css" rel="stylesheet" type="text/css">
 <!-- javascript 링크 -->
 <script src="join.js" type="text/javascript"></script>
-
-<!-- <script type="text/javascript">
-		function input_check(){
-		if(document.join_form.name.value.length == 0){
-			alert("이름을 입력해주세요.");
-			join_form.name.focus();
-			return false;
-		}
-		
-		if(document.join_form.rrn.value.length != 6){
-			alert("주민번호는 6글자 입니다.");
-			join_form.rrn.focus();
-			return false;
-		}
-		
-		if(document.join_form.rrn2.value.length != 7){
-			alert("주민번호는 7글자 입니다.");
-			join_form.rrn2.focus();
-			return false;
-		}
-		
-		if(document.join_form.userid.value.length == 0){
-			alert("아이디를 입력해주세요.");
-			join_form.userid.focus();
-			return false;
-		}
-		
-		if(document.join_form.userid.value.length < 2){
-			alert("아이디는 2글자 이상입력해야 합니다.");
-			join_form.userid.focus();
-			return false;
-		}
-		
-		if(document.join_form.userpwd.value == ""){
-			alert("비밀번호를 필수 입력입니다.");
-			join_form.userpwd.focus();
-			return false;
-		}
-		// 비밀번호 체크
-		if(document.join_form.userpwd.value != document.join_form.userpwd_chk.value){
-			alert("비밀번호가 일치하지 않습니다.");
-			join_form.userpwd_chk.focus();
-			return false;
-		}
-		
-		return true;
-	}	
-</script> -->
 </head>
 
 <body>
 	
-	<form name="join" id="join_frm" method="get" action="JoinServlet">
+	<form name="join" id="join" method="get" action="JoinServlet">
 		
 		<label for="rule" style="color:red">* 필수 입력란</label>
 		<br>
@@ -127,7 +79,7 @@
 			<input type="checkbox" id="interest" name="interest" value="창업"> 창업 
 		
 		<div id="button">
-			<button id="btn">회원가입</button>
+			<input type="submit" value="회원가입" onclick="return check()">
 			<button id="btn" onclick="history.back();"> 뒤로가기</button>
 		</div>
 	</form>
