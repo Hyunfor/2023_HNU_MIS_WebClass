@@ -7,19 +7,20 @@
 <title>회원 가입 하기</title>
 <!-- css 링크 -->
 <link href="join.css" rel="stylesheet" type="text/css">
+<!-- javascript 링크 -->
+<script src="join.js" type="text/javascript"></script>
 
-<script type="text/javascript">
-	
-	function input_check(){
+<!-- <script type="text/javascript">
+		function input_check(){
 		if(document.join_form.name.value.length == 0){
 			alert("이름을 입력해주세요.");
 			join_form.name.focus();
 			return false;
 		}
 		
-		if(document.join_form.rrn1.value.length != 6){
+		if(document.join_form.rrn.value.length != 6){
 			alert("주민번호는 6글자 입니다.");
-			join_form.rrn1.focus();
+			join_form.rrn.focus();
 			return false;
 		}
 		
@@ -35,42 +36,41 @@
 			return false;
 		}
 		
-		if(document.join_form.userid.value.length < 4){
-			alert("아이디는 4글자 이상입력해야 합니다.");
+		if(document.join_form.userid.value.length < 2){
+			alert("아이디는 2글자 이상입력해야 합니다.");
 			join_form.userid.focus();
 			return false;
 		}
 		
-		if(document.join_form.userpwd.value.length == 0){
-			alert("비밀번호를 입력해주세요.");
+		if(document.join_form.userpwd.value == ""){
+			alert("비밀번호를 필수 입력입니다.");
 			join_form.userpwd.focus();
 			return false;
 		}
 		// 비밀번호 체크
-		if(document.join_form.userpwd.value.length != document.join_form.userpwd_chk.value.length){
+		if(document.join_form.userpwd.value != document.join_form.userpwd_chk.value){
 			alert("비밀번호가 일치하지 않습니다.");
 			join_form.userpwd_chk.focus();
 			return false;
 		}
 		
 		return true;
-	}
-	
-</script>
-
+	}	
+</script> -->
 </head>
+
 <body>
 	
-	<form name="join" id="join_form" method="post" action="Joinervlet">
+	<form name="join" id="join_frm" method="get" action="JoinServlet">
 		
-		<label for="rule" style="color:red">* 부분 필수 입력</label>
+		<label for="rule" style="color:red">* 필수 입력란</label>
 		<br>
 		<label for="name">이름 </label><span style="color:red"> * </span>
 		<input type="text" name="name" id="name"> <br>
 		
 		<label for="rrn">주민등록번호 </label><span style="color:red"> * </span>
-		<input type="text" name="rrn1" id="rrm"> - 
-		<input type="text" name="rrn2" id="rrm"> <br>
+		<input type="text" name="rrn" id="rrn"> - 
+		<input type="text" name="rrn2" id="rrn"> <br>
 		
 		<label for="userid">아이디 </label><span style="color:red"> * </span>
 		<input type="text" name="userid" id="userid"><br>
@@ -99,8 +99,8 @@
 		<input type="text" name="addr" id="addr"> 
 		<input type="text" name="addr2" id="addr2"> <br>
 		
-		<label for="phon_num">우편번호 </label> &nbsp;
-		<input type="text" name="phon_num" id="phon_num"> <br>
+		<label for="phone_num">핸드폰 번호 </label> &nbsp;
+		<input type="text" name="phone_num" id="phone_num"> <br>
 		
 		<label for="job">직업</label> &nbsp;
 		<select id="job" name="job" size="1">
@@ -115,7 +115,7 @@
 		</select> <br>
 		
 		<label for="chk_mail"> 메일 정보 수신 여부 </label> &nbsp;
-			<input type="checkbox" id="chk_mail" name="chk_mail" value="yes" checked>수신
+			<input type="checkbox" id="chk_mail" name="chk_mail" value="yes">수신
 			<input type="checkbox" id="chk_mail" name="chk_mail" value="no"> 거부 <br>
 		
 		<label for="interest"> 관심분야 </label> &nbsp;
