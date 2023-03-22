@@ -76,7 +76,7 @@ public class JoinServlet extends HttpServlet {
 			out.print("선택한 항목이 없습니다.");
 		} else {
 			for(String interest : interests){
-				out.print(interests);
+				out.print(interest + " ");
 			}
 		}
 		

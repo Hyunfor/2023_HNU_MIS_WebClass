@@ -71,12 +71,12 @@
 			<input type="checkbox" id="chk_mail" name="chk_mail" value="no"> 거부 <br>
 		
 		<label for="interest"> 관심분야 </label> &nbsp;
-			<input type="checkbox" id="interest" name="interest" value="생두"> 생두
-			<input type="checkbox" id="interest" name="interest" value="원두"> 원두
-			<input type="checkbox" id="interest" name="interest" value="로스팅"> 로스팅 
-			<input type="checkbox" id="interest" name="interest" value="핸드드립"> 핸드드립
-			<input type="checkbox" id="interest" name="interest" value="에스프레소"> 에스프레소
-			<input type="checkbox" id="interest" name="interest" value="창업"> 창업 
+			<input type="checkbox" id="interest" name="interest" value="생두"> 생두 
+			<input type="checkbox" id="interest" name="interest" value="원두"> 원두 
+			<input type="checkbox" id="interest" name="interest" value="로스팅" checked> 로스팅 
+			<input type="checkbox" id="interest" name="interest" value="핸드드립"> 핸드드립 
+			<input type="checkbox" id="interest" name="interest" value="에스프레소" checked> 에스프레소 
+			<input type="checkbox" id="interest" name="interest" value="창업" checked> 창업
 		
 		<div id="button">
 			<input type="submit" value="회원가입" onclick="return input_check()">
