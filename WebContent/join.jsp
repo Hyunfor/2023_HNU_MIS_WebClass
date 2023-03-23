@@ -13,7 +13,7 @@
 
 <body>
 	
-	<form name="join" id="join" method="get" action="JoinServlet" >
+	<form name="join" id="join" method="post" action="JoinServlet" >
 		
 		<label for="rule" style="color:red">* 필수 입력란</label>
 		<br>
