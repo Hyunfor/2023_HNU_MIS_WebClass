@@ -13,16 +13,16 @@
 
 <body>
 	
-	<form name="join" id="join" method="get" action="JoinServlet">
+	<form name="join" id="join" method="get" action="JoinServlet" >
 		
 		<label for="rule" style="color:red">* 필수 입력란</label>
 		<br>
 		<label for="name">이름 </label><span style="color:red"> * </span>
-		<input type="text" name="name" id="name" value="전우치"> <br>
+		<input type="text" name="name" id="name" value="전우치" style="border"> <br>
 		
 		<label for="rrn">주민등록번호 </label><span style="color:red"> * </span>
-		<input type="text" name="rrn" id="rrn" value="890719"> - 
-		<input type="text" name="rrn2" id="rrn2" value="2012123"> <br>
+		<input type="text" name="rrn" id="rrn" value="150917"> - 
+		<input type="text" name="rrn2" id="rrn2" value="1652098"> <br>
 		
 		<label for="userid">아이디 </label><span style="color:red"> * </span>
 		<input type="text" name="userid" id="userid"><br>
@@ -62,6 +62,7 @@
 			<option value="언론">언론</option>
 			<option value="공무원">공무원</option>
 			<option value="군인">군인</option>
+			<option value="도사">도사</option>
 			<option value="서비스업">서비스업</option>
 			<option value="교육">교육</option>
 		</select> <br>

@@ -38,9 +38,9 @@ function input_check(){
 		alert("비밀번호를 필수 입력입니다.");
 		join.userpwd.focus();
 		return false;
-	}
-	// 비밀번호 체크
-	if(document.join.userpwd.value != document.join_frm.userpwd_chk.value){
+	} 
+	
+	if (document.join.userpwd.value != document.join.userpwd_chk.value){ // 비밀번호 체크
 		alert("비밀번호가 일치하지 않습니다.");
 		join.userpwd_chk.focus();
 		return false;

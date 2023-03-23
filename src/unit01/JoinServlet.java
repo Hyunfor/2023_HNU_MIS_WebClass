@@ -43,13 +43,13 @@ public class JoinServlet extends HttpServlet {
 		String job = request.getParameter("job");
 		String interests[] = request.getParameterValues("interest");
 		
-		out.println("이름 : <br>");
+		out.println("이름 : ");
 		out.print(name);
-		out.println("</br><br>주민등록번호 : <br>");
+		out.println("</br><br>주민등록번호 : ");
 		out.print(rrn);
-		out.println("</br><br>아이디 : <br>");
+		out.println("</br><br>아이디 : ");
 		out.print(userid);
-		out.println("</br><br>비밀번호 : <br>");
+		out.println("</br><br>비밀번호 : ");
 		out.print(userpwd);
 	
 		// 이메일 입력시 공백 체크
@@ -58,19 +58,19 @@ public class JoinServlet extends HttpServlet {
 		} else {
 			email += "@" + request.getParameter("email_dns");
 		}
-		out.println("</br><br>이메일 : <br>");
+		out.println("</br><br>이메일 : ");
 		out.print(email);
 		
-		out.println("</br><br>우편주소 : <br>");
+		out.println("</br><br>우편주소 : ");
 		out.print(zip_code);
-		out.println("</br><br>주소 : <br>");
+		out.println("</br><br>주소 : ");
 		out.print(addr);
-		out.println("</br><br>핸드폰 번호 : <br>");
+		out.println("</br><br>핸드폰 번호 : ");
 		out.print(phone_num);
-		out.println("</br><br>직업 : <br>");
+		out.println("</br><br>직업 : ");
 		out.print(job);
 		
-		out.println("</br><br>관심분야 : <br>");
+		out.println("</br><br>관심분야 : ");
 		// 관심분야 체크 유무
 		if(interests == null){
 			out.print("선택한 항목이 없습니다.");
@@ -80,7 +80,7 @@ public class JoinServlet extends HttpServlet {
 			}
 		}
 		
-		out.println("<br><a href='javascript:history.go(-1)'>뒤로가기</a>");
+		out.println("<br><br><br><a href='javascript:history.go(-1)'>뒤로가기</a>");
 		out.println("</body></html>");
 		out.close();
 	}
