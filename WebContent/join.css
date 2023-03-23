@@ -3,7 +3,7 @@ html, body {
 	height: 100%;
 }
 
-label {
+form > label {
 	width: 200px;
 	display: inline-block;
 	float: left;

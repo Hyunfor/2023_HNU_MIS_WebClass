@@ -83,6 +83,7 @@
 			<input type="submit" value="회원가입" onclick="return input_check()">
 			<input type="reset" value="가입취소">
 		</div>
+		
 	</form>
 	
 </body>

@@ -35,6 +35,7 @@ public class JoinServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
 		response.setCharacterEncoding("UTF-8");
 		response.setContentType("text/html; charset=UTF-8");
 		request.setCharacterEncoding("UTF-8");
@@ -52,13 +53,13 @@ public class JoinServlet extends HttpServlet {
 		String job = request.getParameter("job");
 		String interests[] = request.getParameterValues("interest");
 		
-		out.println("이름 : ");
+		out.println("이름 : <b>");
 		out.print(name);
-		out.println("</br><br>주민등록번호 : ");
+		out.println("</b><br>주민등록번호 : <b>");
 		out.print(rrn);
-		out.println("</br><br>아이디 : ");
+		out.println("</b><br>아이디 : <b>");
 		out.print(userid);
-		out.println("</br><br>비밀번호 : ");
+		out.println("</b><br>비밀번호 : <b>");
 		out.print(userpwd);
 	
 		// 이메일 입력시 공백 체크
@@ -67,19 +68,19 @@ public class JoinServlet extends HttpServlet {
 		} else {
 			email += "@" + request.getParameter("email_dns");
 		}
-		out.println("</br><br>이메일 : ");
+		out.println("</b><br>이메일 : <b>");
 		out.print(email);
 		
-		out.println("</br><br>우편주소 : ");
+		out.println("</b><br>우편주소 : <b>");
 		out.print(zip_code);
-		out.println("</br><br>주소 : ");
+		out.println("</b><br>주소 : <b>");
 		out.print(addr);
-		out.println("</br><br>핸드폰 번호 : ");
+		out.println("</b><br>핸드폰 번호 : <b>");
 		out.print(phone_num);
-		out.println("</br><br>직업 : ");
+		out.println("</b><br>직업 : <b>");
 		out.print(job);
 		
-		out.println("</br><br>관심분야 : ");
+		out.println("</b><br>관심분야 : <b>");
 		// 관심분야 체크 유무
 		if(interests == null){
 			out.print("선택한 항목이 없습니다.");
@@ -92,6 +93,8 @@ public class JoinServlet extends HttpServlet {
 		out.println("<br><br><br><a href='javascript:history.go(-1)'>뒤로가기</a>");
 		out.println("</body></html>");
 		out.close();
+
+		
 	}
 
 }

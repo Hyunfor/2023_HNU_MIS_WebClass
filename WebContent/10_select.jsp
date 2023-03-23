@@ -8,7 +8,7 @@
 </head>
 <body>
 	<form method="get" action="SelectServlet">
-		<span style="float: left;margin-right: 20px">
+		<span style="float: left; margin-right: 20px">
 		<label for="job">직업</label>
 		<select id="job" name="job" size="1">
 			<option value="">선택하세요.</option>
