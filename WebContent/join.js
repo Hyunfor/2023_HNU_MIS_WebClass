@@ -8,16 +8,22 @@ function input_check(){
 		alert("이름을 입력해주세요.");
 		join.name.focus();
 		return false;
+	}
+	
+	if(document.join.rrn.value == ""){
+		alert("주민 등록 번호는 필수 입력입니다.");
+		join.rrn.focus();
+		return false;
 	} 
 	
 	if(document.join.rrn.value.length != 6){
-		alert("주민번호는 6글자 입니다.");
+		alert("주민 등록 앞번호는 6글자 입니다.");
 		join.rrn.focus();
 		return false;
 	} 
 	
 	if(document.join.rrn2.value.length != 7){
-		alert("주민번호는 7글자 입니다.");
+		alert("주민 등록 뒷번호는 7글자 입니다.");
 		join.rrn2.focus();
 		return false;
 	}
